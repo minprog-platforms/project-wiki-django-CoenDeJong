@@ -62,3 +62,15 @@ Ten slotte heeft Yvette me geholpen met Github. De reden dat het niet mogelijk w
 In ieder geval voldoet Wiki nu aan alle benodigde specificaties. Echter, er zijn nog een aantal punten waarop ik dit project kan verbeteren. Zoals het toevoegen van een edit view, de url’s fixen (wiki/), terugkoppeling voor wanneer er geen zoekresulaten zijn en opmaak van de forms bij create. Wanneer ik Commerce en Adventures afheb, zal ik hier tijd voor maken.
 
 Voor de rest heb ik deze dag gebruikt om aantekeningen te maken over Commerce en bekend te worden met de bestanden.
+
+##14-12-2022
+Doordat ik vastliep met Commerce leek me het verstandig om in de tussentijd de puntjes op de i zetten in Wiki. Ik merkte gelijk dat deze opdracht een stuk makkelijker was geworden door Commerce en het feit dat ik meer met Django heb gewerkt.
+
+Allereerst wilde ik de ‘Not Found’ pagina weergeven wanneer de user een entry zoekt die niet bestaat en geen substring is van een bestaande entry. Hiervoor heb ik in de for-loop een counter toegevoegd die optelt wanneer er een entry is gevonden met de query als substring. Wanneer deze aan het einde nog steeds 0 is, return ik de ‘Not Found’ pagina.
+
+Vervolgens kwam ik erachter dat bij de Entry’s die gemaakt zijn door de user, de titel niet wordt weergegeven. Daartoe heb ik wederom in views.py, heb ik de input content samengevoegd met ‘#’, ‘‘title’ en ‘\n’ om zo alsnog de titel weer te geven op de pagina. Belangrijk hierbij was dat de huidige (voorgedefinieerde en dus werkende) entry’s niet werden aangetast door deze veranderingen.
+
+Ten slotte heb ik een begin gemaakt aan de edit functie. Ik had een pagina gemaakt en gelinkt via urls.py en render in views.py. Daarna net zoals voor create een textarea gedefinieerd en die gekoppeld in views.py met een if method == “POST” statement. Ik slaagde er alleen niet in om de markdown content in de textarea te krijgen.
+
+##15-12-2022
+Voordat ik naar de errors van Commerce heb gekeken met Max, wilde ik eerste de edit functie voor Wiki afmaken. Samen met Max heb ik allerlei stappen doorgelopen om te achterhalen waar de fouten in zaten. Ik had namelijk {{ content }} juist doorgegeven aan edit.html, echter ging er iets fout in het opvragen waardoor de output “None” was. Dit kwam door het veelvuldig aanvragen voor entry, waardoor bij get_entry de entry niet herkend werd omdat de gehele content van een entry natuurlijk geen title is. Daarna heb ik zelf edit vrij gemakkelijk af kunnen maken. Enige waar ik nog tegen aanliep is dat, de titel in Markdown content bleef staan. Een stom foutje, de reden hiervoor was namelijk een spatie tussen {{content}} en <textarea>.
