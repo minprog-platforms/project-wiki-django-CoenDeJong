@@ -7,10 +7,12 @@
 {% block body %}
     <form action="{% url 'create' %}" method="POST">
       {% csrf_token %}
-      {{createform}}
+      <div id="title">
+        {{createform}}
+      </div>
       <br>
-      <textarea name="content"></textarea>
+      <textarea id="createcontent" name="content" placeholder="Markdown Content"></textarea>
       <br>
-      <input type="submit" value="Save">
+      <input class="button" type="submit" value="Save">
     </form>
 {% endblock %}
