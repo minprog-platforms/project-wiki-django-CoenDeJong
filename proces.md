@@ -74,3 +74,6 @@ Ten slotte heb ik een begin gemaakt aan de edit functie. Ik had een pagina gemaa
 
 ##15-12-2022
 Voordat ik naar de errors van Commerce heb gekeken met Max, wilde ik eerste de edit functie voor Wiki afmaken. Samen met Max heb ik allerlei stappen doorgelopen om te achterhalen waar de fouten in zaten. Ik had namelijk {{ content }} juist doorgegeven aan edit.html, echter ging er iets fout in het opvragen waardoor de output “None” was. Dit kwam door het veelvuldig aanvragen voor entry, waardoor bij get_entry de entry niet herkend werd omdat de gehele content van een entry natuurlijk geen title is. Daarna heb ik zelf edit vrij gemakkelijk af kunnen maken. Enige waar ik nog tegen aanliep is dat, de titel in Markdown content bleef staan. Een stom foutje, de reden hiervoor was namelijk een spatie tussen {{content}} en <textarea>.
+
+##16-12-2022
+Bij Wiki ben ik voor een grijs thema gegaan, zo heb ik de tekstkleur veranderd en de inputs dezelfde stijl gegeven. Van zichzelf is Wiki een vrij simplistische en kale website, daarom wist ik niet echt hoe ik deze minder minimalistisch moest maken. Daarom heb ik een hover effect toegevoegd bij de buttons en de nav bar een border gegeven zodat het er iets minder amateuristisch uitziet.
